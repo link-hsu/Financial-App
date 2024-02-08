@@ -34,8 +34,6 @@ export interface GetKpisResponse {
   updatedAt: string;
 }
 
-// ---
-
 export interface GetProductsResponse {
   id: string;
   _id: string;

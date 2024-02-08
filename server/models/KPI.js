@@ -18,7 +18,7 @@ const monthSchema = new Schema(
       currency: "USD",
       get: (v) => v / 100,
     },
-    operationalExpense: {
+    operationalExpenses: {
       type: mongoose.Types.Currency,
       currency: "USD",
       get: (v) => v / 100,
@@ -70,7 +70,7 @@ const KPISchema = new Schema(
       of: {
         type: mongoose.Types.Currency,
         currency: "USD",
-        get: (v) => v,
+        get: (v) => v / 100,
       },
     } ,
     monthlyData: [monthSchema],

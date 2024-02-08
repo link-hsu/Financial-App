@@ -156,3 +156,7 @@ add   "scripts": {
 
         **5. 總結:**
         這段程式碼定義了一個名為 `expensesByCategory` 的欄位，它是一個 Map，用於存儲費用類別和相應的金額。金額存儲為美元，並在取值時會自動除以 100 進行轉換。
+
+
+* Types of intellisense
+https://code.visualstudio.com/docs/editor/intellisense

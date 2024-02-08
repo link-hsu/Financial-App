@@ -21,10 +21,6 @@ import { useTheme } from "@mui/material";
 const Row1 = () => {
   const { palette } = useTheme();
   const { data, error, isLoading } = useGetKpisQuery();
-  console.log(`data: ${data}`);
-  console.log("Row1 ~ isLoading:", isLoading)
-  console.log("Row1 ~ error:", error)
-  console.log("Row1 ~ data:", data)
 
   const revenueExpenses = useMemo(() => {
     return (

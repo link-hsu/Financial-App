@@ -1,27 +1,33 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { GetKpisResponse } from "./types";
+import { GetKpisResponse, GetProductsResponse, GetTransactionsResponse } from "./types";
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:1337' }),
   reducerPath: "main",
-  tagTypes: ["Kpis"],
+  tagTypes: ["Kpis", "Products", "Transactions"],
   endpoints: (build) => ({
     // first genetic is the response we want
     getKpis: build.query<Array<GetKpisResponse>, void>({
       query: () => "kpi/kpis/",
       providesTags: ["Kpis"]
     }),
-    // getKpis2: build.query({
-    //   query: () => "kpi/kpis2/",
-    //   providesTags: ["Kpis"]
-    // }),
-  })
+    getProducts: build.query<Array<GetProductsResponse>, void>({
+      query: () => "product/products/",
+      providesTags: ["Products"],
+    }),
+    // deleteProduct:
+    //   invalidateTags: ["Products"]
+    getTransactions: build.query<Array<GetTransactionsResponse>, void>({
+      query: () => "transaction/transactions/",
+      providesTags: ["Transactions"],
+    }),
+  }),
 });
 
-export const { useGetKpisQuery } = api;
+// use 是 React hook 的前綴。
+// GetKpis 是 getKpis 函數名稱的 PascalCase 版本。
+export const {  useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } = api;
 
-
-// import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // export const api = createApi({
 //   baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL }),
@@ -32,14 +38,14 @@ export const { useGetKpisQuery } = api;
 //       query: () => "kpi/kpis/",
 //       providesTags: ["Kpis"],
 //     }),
-//     // getProducts: build.query<Array<GetProductsResponse>, void>({
-//     //   query: () => "product/products/",
-//     //   providesTags: ["Products"],
-//     // }),
-//     // getTransactions: build.query<Array<GetTransactionsResponse>, void>({
-//     //   query: () => "transaction/transactions/",
-//     //   providesTags: ["Transactions"],
-//     // }),
+//     getProducts: build.query<Array<GetProductsResponse>, void>({
+//       query: () => "product/products/",
+//       providesTags: ["Products"],
+//     }),
+//     getTransactions: build.query<Array<GetTransactionsResponse>, void>({
+//       query: () => "transaction/transactions/",
+//       providesTags: ["Transactions"],
+//     }),
 //   }),
 // });
 

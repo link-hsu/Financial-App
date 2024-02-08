@@ -136,3 +136,37 @@ npm i recharts
     }
     此定義表示 `transactions` 屬性可以包含一個字串陣列。
     希望這對您有所幫助。
+
+* RTK query
+      在 endpoints 參數中，您定義了三個端點：
+      getKpis
+      getProducts
+      getTransactions
+      每個端點都使用 build.query 函數建立。build.query 接受多個參數，其中 query 參數用於定義端點的查詢。
+      在 query 參數中，您指定了一個 URL。當您連線到 localhost 主頁時，RTK Query 會自動向您設定的那些不同路徑執行 GET 請求。
+      因此，您不需要在路由變化後再去 fetch 資料。RTK Query 會在您連線到 localhost 主頁時自動 fetch 資料。
+      以下是一些有關 RTK Query 如何工作的額外資訊：
+      RTK Query 使用 Redux 來管理 API 的狀態。
+      RTK Query 使用 SWR 來緩存 API 的響應。
+      RTK Query 提供 自動重新驗證 和 錯誤處理。
+
+* Data grid
+https://mui.com/x/react-data-grid/
+
+* Object.entries() vs Map|Set|String.entries()
+      // 使用 Object.entries() 方法，返回一个包含键值对的数组，適用任何對象
+      const data = {
+        name: "John Doe",
+        age: 30,
+      };
+      const entries = Object.entries(data);
+      console.log(entries); // [["name", "John Doe"], ["age", 30]]
+
+      // 使用一个对象使用 .entries 方法
+      const map = new Map([
+        ["name", "John Doe"],
+        ["age", 30],
+      ]);
+      const iterator = map.entries();
+      console.log(iterator.next().value); // ["name", "John Doe"]
+      console.log(iterator.next().value); // ["age", 30]
