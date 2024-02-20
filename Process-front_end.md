@@ -1,4 +1,9 @@
 ## Process-front_end
+**[Course Link](https://www.youtube.com/watch?v=uoJ0Tv-BFcQ&t=10409s)**  
+**[Github Link](https://github.com/ed-roh/finance-app)**  
+**[Github Theme](https://github.com/ed-roh/finance-app/blob/master/client/src/theme.ts)**  
+**[Github data](https://github.com/ed-roh/finance-app/blob/master/server/data/data.js)** 
+
 - **Create vite react typrescript project**  
   ```npm create vite@latest```  
   Choose - client -> react -> typescript
@@ -36,7 +41,8 @@
   ~~~
 
 - ~~~ javascript
-  //create file in src/: .env.local
+  // setting for vite's env variable
+  // create file in src/: .env.local
   
   VITE_BASE_URL=http://localhost:1337
   ~~~
@@ -44,8 +50,8 @@
 - Setting for typescript -
   ~~~ ts
   //tsconfig.json
-  //add ...
-  "types": ["vite/client"] //in compilerOptions
+  //add in compilerOptions ...
+  "types": ["vite/client"] //
   ~~~
 
 - Setting for using - ```import path start to @/ s```
@@ -80,7 +86,8 @@
   - [cheat sheet](https://grid.malven.co/)
   - [about grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)
 
-- *createSlice 和 configureStore 用於管理應用程式的內部狀態。* & *createApi 用於管理與 API 請求相關的狀態。*
+- *createSlice 和 configureStore 用於管理應用程式的內部狀態。*  
+  *createApi 用於管理與 API 請求相關的狀態。*
   | 功能 | createSlice 和 configureStore | createApi |
   |:--------|:-------:|--------:|
   | 目的 | 管理通用Redux狀態   | 管理API請求狀態   |
@@ -95,7 +102,7 @@
   ```npm i recharts```
 
 
-- something about TS
+- something about TS  
     好的，以下是我的整理：
     - **TypeScript 中的 Array 型別**  
     在 TypeScript 中，`Array` 型別可以用來表示一組有序的值。陣列中的元素可以是任何型別。
