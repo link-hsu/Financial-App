@@ -3,6 +3,7 @@ import { GetKpisResponse, GetProductsResponse, GetTransactionsResponse } from ".
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:1337' }),
+  // import.meta.env.VITE_BASE_URL
   reducerPath: "main",
   tagTypes: ["Kpis", "Products", "Transactions"],
   endpoints: (build) => ({

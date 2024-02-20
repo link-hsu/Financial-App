@@ -160,3 +160,31 @@ add   "scripts": {
 
 * Types of intellisense
 https://code.visualstudio.com/docs/editor/intellisense
+
+* fly.io deployment
+https://fly.io/docs/js/
+
+* set-up for backEnd
+  cd server
+  flyctl lauch -> choose a app name: keep blank + enter
+  -> no seup for databases: No * 2
+     create .dockerignore files: Yes
+  
+  // using below: dockerimage need to be buiilt by myself
+  fly deploy --local -only
+
+  // .env
+  PORT = '8080'
+  // api.ts
+  http://localhost:8080
+
+  flyctl secrets set PORT=8080 MONGO_URL = 'mongodb+srv://eatnoodless:Aa123456@cluster0.1qmraou.mongodb.net/?retryWrites=true&w=majority'
+
+* set-up for frontEnd
+  1. create a github repository
+  2. git init
+     git add .
+     git commit -m "something"
+     git add remote add origin [url.git]
+     git push -u origin master
+  3. host for frontEnd 

@@ -1,0 +1,173 @@
+- ```mkdir server```  
+  ```cd server```
+- ```npm init -y```
+- ```npm i express body-parser cors dotenv helmet morgan mongoose mongoose-currency```
+- **同源策略** 是一種瀏覽器端的安全機制，它限制了不同來源之間的 HTTP 請求。同源策略規定，只有來自相同來源的 HTTP 請求才能訪問或修改網頁的 DOM。
+  - 相同來源 的定義是：
+    1. 協議相同
+    2. 主機名相同
+    3. 埠號相同
+- ```npm i -D nodemon```
+
+* ~~~ json
+  // package.json
+  //add
+  "type": "module",
+  //add
+  "scripts": {
+      "dev": "nodemon index.js"
+    },
+  ~~~
+
+- process in node.js
+  在 Node.js 中，`process` 是一个全局对象，它代表当前的 Node.js 进程。它提供了有关当前进程的信息和控制其行为的方法。  
+  `process` 对象具有以下属性和方法：  
+  - **属性**
+    * `arch`: 当前进程的 CPU 架构。
+    * `argv`: 一个包含命令行参数的数组。
+    * `config`: 一个包含 Node.js 配置信息的字典。
+    * `connected`: 一个指示当前进程是否连接到调试器的布尔值。
+    * `env`: 一个包含环境变量的字典。
+    * `execPath`: 当前进程的可执行文件的路径。
+    * `exitCode`: 当前进程的退出代码。
+    * `gid`: 当前进程的组 ID。
+    * `pid`: 当前进程的 ID。
+    * `platform`: 当前进程的操作系统平台。
+    * `release`: Node.js 的版本号。
+    * `stderr`: 一个指向标准错误输出流的流对象。
+    * `stdin`: 一个指向标准输入流的流对象。
+    * `stdout`: 一个指向标准输出流的流对象。
+    * `title`: 当前进程的标题。
+    * `versions`: 一个包含 Node.js 相关版本的字典。
+  - **方法**
+    * `abort()`: 终止当前进程。
+    * `chdir(directory)`: 将当前工作目录更改为指定目录。
+    * `cwd()`: 返回当前工作目录。
+    * `disconnect()`: 从调试器断开连接。
+    * `emit(event, [arg1, arg2, ...])`: 触发指定事件。
+    * `env(key)`: 获取指定环境变量的值。
+    * `exit([code])`: 退出当前进程，可选地指定退出代码。
+    * `getgid()`: 获取当前进程的组 ID。
+    * `getuid()`: 获取当前进程的用户 ID。
+    * `hrtime([time])`: 返回当前进程的高精度时间。
+    * `kill(pid, [signal])`: 向指定进程发送信号。
+    * `memoryUsage()`: 返回当前进程的内存使用情况。
+    * `nextTick(callback)`: 将回调函数排入到事件循环的下一个阶段。
+    * `on(event, listener)`: 为指定事件添加事件侦听器。
+    * `once(event, listener)`: 为指定事件添加一次性事件侦听器。
+    * `open(path, [flags], [mode])`: 打开指定文件。
+    * `platform()`: 返回当前进程的操作系统平台。
+    * `removeAllListeners(event)`: 移除所有指定事件的事件侦听器。
+    * `removeListener(event, listener)`: 移除指定事件的事件侦听器。
+    * `send(message, [sendHandle])`: 向父进程发送消息。
+    * `setegid(gid)`: 设置当前进程的组 ID。
+    * `seteuid(uid)`: 设置当前进程的用户 ID。
+    * `setgid(gid)`: 设置当前进程的组 ID。
+    * `setuid(uid)`: 设置当前进程的用户 ID。
+    * `stderr`: 一个指向标准错误输出流的流对象。
+    * `stdin`: 一个指向标准输入流的流对象。
+    * `stdout`: 一个指向标准输出流的流对象。
+    * `title`: 当前进程的标题。
+    * `uncaughtException(exception)`: 处理未捕获的异常。
+    * `uptime()`: 返回当前进程的运行时间。
+    * `versions`: 一个包含 Node.js 相关版本的字典。
+    * `workerThreads`: 一个包含 worker 线程的数组。
+  - **示例**
+    以下示例演示了如何使用 `process` 对象获取当前进程的 ID 和命令行参数：
+    ~~~ ts
+    const process = require('process');
+    console.log(`当前进程的 ID 为：${process.pid}`);
+    console.log(`命令行参数为：${process.argv}`);
+    // 输出：
+    // 当前进程的 ID 为：12345
+    // 命令行参数为：['node', 'example.js']
+    ~~~
+  - **总结**  
+    `process` 对象是 Node.js 中一个重要的对象，它提供了有关当前进程的信息和控制其行为的方法。了解 `process` 对象的属性和方法可以帮助您更好地编写 Node.js 应用程序。
+
+- **process.env**
+  - 好的，以下是精簡後的內容：
+    - **`.env` 文件**
+      * 用於存储环境变量，通常用于存储敏感信息。
+      * 必须位于应用程序根目录下。
+      * 键值对必须使用空格或制表符分隔。
+      * 键名不能包含空格或特殊字符。
+      * 值可以是任何字符串。
+    - **`process.env` 字典**
+      * 包含 Node.js 进程的环境变量。
+      * 可以使用 `dotenv` 包加载 `.env` 文件中的环境变量。
+
+    - **示例**
+      ~~~ ts
+      require('dotenv').config();
+      const PORT = process.env.PORT;
+      console.log(`PORT 的值为：${PORT}`);  
+      // **輸出**
+      // PORT 的值为：1337
+      ~~~
+    - **精簡說明**
+      * 刪除不必要的細節，例如 `.env` 文件的格式和 `process.env` 字典的屬性和方法。
+      * 將重點放在 `.env` 文件和 `process.env` 字典的關係上。
+      * 使用更簡潔的語言。
+- mongoose安裝需注意版本，預設會安裝舊版
+- **mongoose schema**
+  ~~~ javascript
+  const KPISchema = new Schema({
+      expensesByCategory: {
+        type: Map,
+        of: {
+          type: mongoose.Types.Currency,
+          currency: "USD",
+          get: (v) => v / 100,
+        },
+      },
+    },
+  );
+  ~~~
+  - 說明
+    - 它表示一個用於存儲費用類別和相應金額的欄位。
+    - 其類型為 `Map`，這意味著它會存儲鍵值對，其中：
+        - 鍵 (key) 代表費用類別 (例如："Travel", "Marketing", "Rent")。
+        - 值 (value) 代表該類別的費用金額。
+    **2. `type: Map`:**
+    - 指定 `expensesByCategory` 欄位為 `Map` 類型，用於存儲鍵值對。
+    **3. `of:`:**
+    - 用於指定 Map 中值的類型。
+    **4. `of: { type: mongoose.Types.Currency, currency: "USD", get: (v) => v / 100 }`:**
+    - 指定 Map 中的值為 `mongoose.Types.Currency` 類型，用於存儲貨幣金額。
+    - `currency: "USD"` 表示貨幣單位為美元。
+    - `get: (v) => v / 100` 是一個 getter 函數，在取值時會將實際存儲的金額除以 100，通常用於將存儲的整數形式的金額轉換為分數形式（例如：存儲 12345，取值時返回 123.45）。
+    **5. 總結:**
+    這段程式碼定義了一個名為 `expensesByCategory` 的欄位，它是一個 Map，用於存儲費用類別和相應的金額。金額存儲為美元，並在取值時會自動除以 100 進行轉換。
+
+- **[Types of intellisense](https://code.visualstudio.com/docs/editor/intellisense)**
+
+- **[fly.io deployment](https://fly.io/docs/js/)**
+
+- Setup for backEnd
+  ```cd server```
+  - flyctl lauch -> choose a app name: keep blank + enter  
+    -> no seup for databases: No * 2  
+      create ```.dockerignore``` files: Yes
+  
+  - // using below: dockerimage need to be buiilt by myself
+    ```fly deploy --local -only```
+
+  - setup
+    ~~~ json
+    // .env
+    PORT = '8080'
+    // api.ts
+    http://localhost:8080
+    ~~~
+  - flyctl secrets set PORT=8080 MONGO_URL = 'mongodb+srv://eatnoodless:Aa123456@cluster0.1qmraou.mongodb.net/?retryWrites=true&w=majority'
+
+- set-up for frontEnd
+  1. create a github repository
+  2. ~~~ ts
+     git init
+     git add .
+     git commit -m "something"
+     git add remote add origin [url.git]
+     git push -u origin master
+  3. host for frontEnd 
