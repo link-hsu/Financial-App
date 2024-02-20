@@ -3,7 +3,18 @@
 **[Github Link](https://github.com/ed-roh/finance-app)**  
 **[Github Theme](https://github.com/ed-roh/finance-app/blob/master/client/src/theme.ts)**  
 **[Github data](https://github.com/ed-roh/finance-app/blob/master/server/data/data.js)** 
-
+> *Additional*
+ - [tailwind cheatSheet](https://nerdcave.com/tailwind-cheat-sheet)
+ - [Typescript cheatSheet](https://www.typescriptlang.org/cheatsheets)
+ - [GeekforGeeks](https://www.geeksforgeeks.org)
+ - [TutorialsPoint](https://www.tutorialspoint.com/index.htm)
+ - [mixed cheatSheet](https://guide-cheatsheet.netlify.app/)
+ - [ReactTypescript cheatSheet](https://react-typescript-cheatsheet.netlify.app/)
+ - [Rico's cheatSheet](https://devhints.io/)
+ - [Webpack cheatSheet](https://dev.to/zinox9/webpack-cheatsheet-7pj)
+ - [NextJS cheatsheet(1)](https://blog.wrappixel.com/nextjs-cheat-sheet/)
+ - [NextJS cheatsheet(2)](https://github.com/emanuelefavero/next-js)
+---
 - **Create vite react typrescript project**  
   ```npm create vite@latest```  
   Choose - client -> react -> typescript
@@ -21,7 +32,7 @@
     - Redux Dev tool
     - Pesticide for chrome
 - **install dependencies** -
-  ```npm i react-redux @reduxjs/toolkit react-router-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/x-data-grid```
+  ```npm i react-redux @reduxjs/toolkit react-router-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/x-datfa-grid```
 - *install typescript*
   ```npm i -D @types/react-dom```
 
@@ -32,7 +43,8 @@
   ~~~
 
 - **To check error**
-  ```npm i -D eslint```
+  ```npm i -D eslint eslint-config-react-app```
+  [Eslint Setting by PJ](https://pjchender.dev/webdev/note-eslint/)
   ~~~ ts
   //create file in src/: .eslintrc.json for
   {
@@ -84,7 +96,8 @@
 - 如果我在folder裡面放的是index.jsx，我在import時可以省略最後 "/index.jsx"
 - **grid**
   - [cheat sheet](https://grid.malven.co/)
-  - [about grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)
+  - [about grid(1-mdn)](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)
+  - [about grid(2-cssTricks)](https://css-tricks.com/snippets/css/complete-guide-grid/#prop-display)
 
 - *createSlice 和 configureStore 用於管理應用程式的內部狀態。*  
   *createApi 用於管理與 API 請求相關的狀態。*
