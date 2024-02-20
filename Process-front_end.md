@@ -28,7 +28,7 @@
 
 - **To check error**
   ```npm i -D eslint```
-  ~~~ json
+  ~~~ ts
   //create file in src/: .eslintrc.json for
   {
       "extends": "react-app"
@@ -42,7 +42,7 @@
   ~~~
 
 - Setting for typescript -
-  ~~~ json
+  ~~~ ts
   //tsconfig.json
   //add ...
   "types": ["vite/client"] //in compilerOptions

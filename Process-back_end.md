@@ -9,7 +9,7 @@
     3. 埠號相同
 - ```npm i -D nodemon```
 
-* ~~~ json
+* ~~~ ts
   // package.json
   //add
   "type": "module",
@@ -154,7 +154,7 @@
     ```fly deploy --local -only```
 
   - setup
-    ~~~ json
+    ~~~ ts
     // .env
     PORT = '8080'
     // api.ts
