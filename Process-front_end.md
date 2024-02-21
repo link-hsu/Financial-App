@@ -2,7 +2,13 @@
 **[Course Link](https://www.youtube.com/watch?v=uoJ0Tv-BFcQ&t=10409s)**  
 **[Github Link](https://github.com/ed-roh/finance-app)**  
 **[Github Theme](https://github.com/ed-roh/finance-app/blob/master/client/src/theme.ts)**  
-**[Github data](https://github.com/ed-roh/finance-app/blob/master/server/data/data.js)** 
+**[Github data](https://github.com/ed-roh/finance-app/blob/master/server/data/data.js)**
+> *Resources*
+ - [Hero Icons](https://heroicons.com/)
+ - [Material Icons](https://mui.com/material-ui/material-icons/)
+ - [Font Awesome](https://fontawesome.com/)
+ - 
+*[Material UI creator](https://bareynol.github.io/mui-theme-creator/#Avatar)*
 > *Additional*
  - [tailwind cheatSheet](https://nerdcave.com/tailwind-cheat-sheet)
  - [Typescript cheatSheet](https://www.typescriptlang.org/cheatsheets)
@@ -14,6 +20,17 @@
  - [Webpack cheatSheet](https://dev.to/zinox9/webpack-cheatsheet-7pj)
  - [NextJS cheatsheet(1)](https://blog.wrappixel.com/nextjs-cheat-sheet/)
  - [NextJS cheatsheet(2)](https://github.com/emanuelefavero/next-js)
+ - [Next.js + MUI v5 + Typescript tutorial and starter](https://dev.to/hpouyanmehr/nextjs-mui-v5-typescript-tutorial-and-starter-3pab)
+ - [React Style cheatSheet(1)](https://codepen.io/lordliquid/pen/GvzpRJ)
+ - [React Style cheatSheet(2)](https://github.com/vhpoet/react-native-styling-cheat-sheet)
+ - [DifferChecker](https://www.diffchecker.com/)
+ - [vim cheatSheet(中文)](https://github.com/chloneda/vim-cheatsheet)
+ - [Over API](https://overapi.com/?fbclid=IwAR1TId_oZopVjUGOZAoK0B3zT3AS5BwknowvkVpn31fQeyBSx7rYUkujIgc)
+ - [Readme.md教學](https://blog.csdn.net/Zsk_Zane/article/details/47205403)
+ - [Convert video to .gif(1)](https://www.youtube.com/watch?v=sb1dW031OAU)
+ - [Convert video to .gif(2)](https://www.youtube.com/watch?v=quKgo3ChvWY)
+> Temperary
+ - [react-router-dom](https://www.codecademy.com/learn/learn-react-router/modules/learn-react-router/cheatsheet)
 ---
 - **Create vite react typrescript project**  
   ```npm create vite@latest```  
