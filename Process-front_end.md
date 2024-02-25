@@ -50,6 +50,15 @@
  - [redux cheatSheet](https://gist.github.com/ML-Chen/f192e11189e0e01e087de60bdfc7a5f1)
 
  - [前端資源及題庫](https://mingjun.lu/blog/how-i-became-a-front-end-web-developer-in-2020)
+
+ - [comibne mui and react-router](https://mui.com/material-ui/integrations/routing/#global-theme-link)
+  > Chatgpt: 這段程式碼的主要用途是將 Material-UI 的 Link 和 Button 組件中的超連結行為改為使用 react-router-dom 提供的 Link 組件，這樣在點擊時將會進行客戶端路由導航而不是簡單的頁面跳轉。
+    - 讓我們一步步來解釋這段程式碼的功能：
+      1. 首先，定義了一個 `LinkBehavior` 組件，它是一個 forwardRef，接受 `RouterLinkProps` 作為參數。它將接收到的 `href` 屬性轉換為 `to` 屬性，並將其他屬性傳遞給 react-router-dom 的 Link 組件。
+      2. 接著，定義了一個 `Router` 組件，用來根據環境判斷是使用 `StaticRouter` 還是 `MemoryRouter`，以確保在服務器端渲染時正確運作。
+      3. 創建了一個主題（theme），並在其中設置了 `MuiLink` 和 `MuiButtonBase` 組件的默認屬性，將它們的 `component` 和 `LinkComponent` 分別設置為前面定義的 `LinkBehavior` 組件。
+      4. 最後，渲染了一個 Stack 組件，其中包含了一個 ThemeProvider，並在其中渲染了一個 Router，內部包含了一個 Link 和一個 Button。這些組件都使用了前面定義的主題。
+      至於您的問題，是的，這段程式碼中的 MuiLink（即 Material-UI 的 Link 組件）已經被轉換為使用 react-router-dom 的 Link 組件。這樣一來，當點擊這些 Link 時，將會使用 react-router-dom 進行客戶端路由導航，而不是簡單的頁面跳轉。
 ---
 - **Create vite react typrescript project**  
   ```npm create vite@latest```  
