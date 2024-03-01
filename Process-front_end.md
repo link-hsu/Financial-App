@@ -46,7 +46,7 @@
  - [redux實作ssr](https://medium.com/%E6%89%8B%E5%AF%AB%E7%AD%86%E8%A8%98/server-side-rendering-ssr-in-reactjs-part3-7f2097963754)
  - [react-router ssr example](https://stackblitz.com/github/remix-run/react-router/tree/main/examples/ssr?file=src%2Fentry.server.tsx)
  - [react-router quick start](https://v5.reactrouter.com/core/guides/quick-start)
-
+ - [redux - tutorial guide(中文)](https://chentsulin.github.io/redux/docs/introduction/Ecosystem.html)
  - [redux cheatSheet](https://gist.github.com/ML-Chen/f192e11189e0e01e087de60bdfc7a5f1)
 
  - [前端資源及題庫](https://mingjun.lu/blog/how-i-became-a-front-end-web-developer-in-2020)
