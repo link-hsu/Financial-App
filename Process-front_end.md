@@ -34,6 +34,8 @@
  - [JavaScript Tutorial](https://www.javascripttutorial.net/)
  - [JavaScript Document Object Model(DOM)](https://www.robertlgorman.com/JavaScript_Sandbox/JavaScript-Dom.html)
  - [Javascript cheatSheet](https://github.com/Pradeep-Pandey13/CheatSheets-HTML-CSS-JavaScript/blob/main/JavaScript%20DOM%20Cheatsheet.png)
+> *Vercel deploy*
+ - [使用Vercel部署前端與後端專案(React, NodeJS API Service)](https://www.youtube.com/watch?v=fz77TeUTkPE)
 > Temperary
  - [react-router-dom](https://www.codecademy.com/learn/learn-react-router/modules/learn-react-router/cheatsheet)
  - [HTML Inputs and Labels: A Love Story](https://css-tricks.com/html-inputs-and-labels-a-love-story/)
@@ -77,9 +79,12 @@
     - Redux Dev tool
     - Pesticide for chrome
 - **install dependencies** -
-  ```npm i react-redux @reduxjs/toolkit react-router-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/x-datfa-grid```
+  ```npm i react-redux @reduxjs/toolkit react-router-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/x-data-grid```
 - *install typescript*
   ```npm i -D @types/react-dom```
+  ```npm i -D @types/node```
+  
+  
 
 - **font setting** for google font - *Inter*
   ~~~ css
